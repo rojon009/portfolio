@@ -20,11 +20,13 @@ const ProjectCard = ({ project: { name, category, image_path, deployed_url, desc
                         <img src={image_path} className="rounded-md" alt={name}/>
                         <div className="flex justify-center space-x-4">
                             <button
-                                className="flex items-center rounded-md hover:shadow-xl bg-gradient-to-r from-grish to-blue-400 px-4 py-2"
-                                ><CgWebsite className="mr-3" size={30}/> Live Demo</button>
+                                onClick={() => window.open(deployed_url)}
+                                className="flex flex-1 items-center rounded-md hover:shadow-xl bg-gradient-to-r from-grish to-blue-400 px-4 py-2"
+                                ><CgWebsite className="mr-1" size={30}/> Live Demo</button>
                             <button
-                                className="flex items-center rounded-md hover:shadow-xl bg-gradient-to-r from-grish to-blue-400 px-4 py-2"
-                                ><FiGithub className="mr-3" size={30} /> Github</button>
+                                onClick={() => window.open(github_url[0])}
+                                className="flex flex-1 items-center rounded-md hover:shadow-xl bg-gradient-to-r from-grish to-blue-400 px-4 py-2"
+                                ><FiGithub className="mr-1" size={30} /> Github</button>
                         </div>
                     </div>
                     <div className="col-span-12 lg:col-span-6">

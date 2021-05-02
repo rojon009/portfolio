@@ -528,6 +528,12 @@ html,body{
 .-mb-5{
 	margin-bottom: -1.25rem;
 }
+.mr-2{
+	margin-right: 0.5rem;
+}
+.mr-1{
+	margin-right: 0.25rem;
+}
 .grid{
 	display: grid;
 }
@@ -563,6 +569,9 @@ html,body{
 }
 .w-8\/12{
 	width: 66.666667%;
+}
+.flex-1{
+	flex: 1 1 0%;
 }
 .transform{
 	--tw-translate-x: 0;
