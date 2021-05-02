@@ -1,6 +1,8 @@
 import { AiOutlineApi, AiOutlineDesktop } from "react-icons/ai";
 import { HiOutlineDatabase } from "react-icons/hi";
 import { FaCheckCircle } from "react-icons/fa";
+import { FiFigma } from 'react-icons/fi'
+
 
 export const services = [
   {
@@ -22,10 +24,10 @@ export const services = [
     Icon: AiOutlineApi,
   },
   {
-    title: "API Development",
+    title: "UI / UX Development",
     description:
-      "I can build RestFull API with Nodejs and Express including support of Authentication.",
-    Icon: AiOutlineApi,
+      "I have skills on <strong>UI/UX</strong> design. I can work with Adobe XD, Figma, Illustrator template.",
+    Icon: FiFigma,
   },
   {
     title: "API Development",
