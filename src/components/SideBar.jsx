@@ -3,7 +3,7 @@ import profile from '../images/rojon.jpg';
 import {SiFacebook, SiGithub, SiLinkedin} from 'react-icons/si';
 import {IoLocationOutline} from 'react-icons/io5'
 import { HiOutlineDownload } from 'react-icons/hi';
-import resume from '../images/resume.pdf';
+import resume from '../images/rojon_resume.pdf';
 
 const SideBar = ({handleDark, dark}) => {
     return (
