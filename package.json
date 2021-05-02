@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "css:watch": "postcss ./src/tailwind.css -o ./src/index.css -w --verbose",
-    "css:build": "postcss ./src/tailwind.css -o ./src/index.css"
+    "css:build": "postcss ./src/tailwind.css -o ./src/index.css --verbose"
   },
   "eslintConfig": {
     "extends": [
