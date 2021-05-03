@@ -531,6 +531,12 @@ html,body{
 .-mb-5{
 	margin-bottom: -1.25rem;
 }
+.-mb-1{
+	margin-bottom: -0.25rem;
+}
+.mt-1{
+	margin-top: 0.25rem;
+}
 .grid{
 	display: grid;
 }
@@ -775,6 +781,9 @@ html,body{
 .p-5{
 	padding: 1.25rem;
 }
+.p-3{
+	padding: 0.75rem;
+}
 .py-14{
 	padding-top: 3.5rem;
 	padding-bottom: 3.5rem;
@@ -887,6 +896,10 @@ html,body{
 	--tw-text-opacity: 1;
 	color: rgba(16, 185, 129, var(--tw-text-opacity));
 }
+.text-red-500{
+	--tw-text-opacity: 1;
+	color: rgba(239, 68, 68, var(--tw-text-opacity));
+}
 .underline{
 	text-decoration: underline;
 }
@@ -915,8 +928,27 @@ html,body{
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
 }
+.transition{
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
 .duration-500{
 	transition-duration: 500ms;
+}
+.duration{
+	transition-duration: 150ms;
+}
+.duration-1000{
+	transition-duration: 1000ms;
+}
+.duration-200{
+	transition-duration: 200ms;
+}
+.duration-75{
+	transition-duration: 75ms;
 }
 .selected{
 	border-bottom-width: 4px;
@@ -980,6 +1012,10 @@ html,body{
 .dark .dark\:text-grish{
 	--tw-text-opacity: 1;
 	color: rgba(0, 242, 96, var(--tw-text-opacity));
+}
+.dark .dark\:text-red-500{
+	--tw-text-opacity: 1;
+	color: rgba(239, 68, 68, var(--tw-text-opacity));
 }
 .dark .dark\:ring-white{
 	--tw-ring-opacity: 1;

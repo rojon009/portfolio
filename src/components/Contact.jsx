@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { AiOutlineSend, AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { motion } from 'framer-motion';
 const Contact = () => {
 
     const [spin, setSpin] = useState(false)
@@ -41,7 +42,7 @@ const Contact = () => {
                 <input value={formInfo.name} onChange={(e) => handleChange(e)} required className="border dark:bg-dark-400 border-grish  dark:border-white outline-none dark:focus:border-grish focus:border-gray-600 px-3 py-2 rounded-md" type="text" name="name" placeholder="Your name" />
                 <input value={formInfo.email} onChange={handleChange} required className="border dark:bg-dark-400 border-grish  dark:border-white outline-none dark:focus:border-grish focus:border-gray-600 px-3 py-2 rounded-md" type="email" name="email" id="email" placeholder="Your Email" />
                 <textarea value={formInfo.message} onChange={handleChange} required className="border dark:bg-dark-400 border-grish  dark:border-white outline-none dark:focus:border-grish focus:border-gray-600 px-3 py-2 rounded-md" name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                <button className="bg-gradient-to-r from-grish to-blue-500 w-32 px-5 rounded-md py-2 flex items-center justify-center text-white" type="submit">{spin && <AiOutlineLoading3Quarters className="animate-spin mr-3" size={20} />} Send <AiOutlineSend className="ml-3" /></button>
+                <motion.button whileHover={{scale: 1.03}} whileTap={{scale:1}} className="bg-gradient-to-r from-grish to-blue-500 w-32 px-5 rounded-md py-2 flex items-center justify-center text-white" type="submit">{spin && <AiOutlineLoading3Quarters className="animate-spin mr-3" size={20} />} Send <AiOutlineSend className="ml-3" /></motion.button>
             </form>
         </div>
     );

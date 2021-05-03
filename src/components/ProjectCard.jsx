@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { CgWebsite } from 'react-icons/cg';
 import { FaWindowClose } from 'react-icons/fa';
@@ -6,10 +7,12 @@ const ProjectCard = ({ project: { name, category, image_path, deployed_url, desc
     const [active, setActive] = useState(false);
     return (
         <>
-            <div className="col-span-12 sm:col-span-6 lg:col-span-4 bg-gray-200 dark:bg-dark-900 dark:text-white rounded-lg overflow-hidden hover:shadow-lg transition-all duration-500">
-                <img onClick={() => setActive(true)} src={image_path} alt={name} className="transform hover:scale-110 transition-all duration-500 cursor-pointer object-cover w-full" />
-                <div className="p-2">
-                    <h3 className="text-lg font-medium tracking-wide">{name}</h3>
+            <div className="col-span-12 p-3 sm:col-span-6 lg:col-span-4 bg-gray-300 dark:bg-dark-900 dark:text-white rounded-lg overflow-hidden hover:shadow-lg transition-all duration-500">
+                <div className="overflow-hidden rounded-lg">
+                    <img onClick={() => setActive(true)} src={image_path} alt={name} className="rounded-lg transform hover:scale-110 transition-all duration-500 cursor-pointer object-cover w-full" />
+                </div>
+                <div>
+                    <h3 className="text-lg font-medium tracking-wide -mb-1 mt-1">{name}</h3>
                     <p className="text-sm">{category}</p>
                 </div>
             </div>
@@ -19,14 +22,16 @@ const ProjectCard = ({ project: { name, category, image_path, deployed_url, desc
                     <div className="col-span-12 lg:col-span-6 mx-auto space-y-4">
                         <img src={image_path} className="rounded-md" alt={name}/>
                         <div className="flex justify-center space-x-4">
-                            <button
+                            <motion.button
+                                whileHover={{scale: 1.03}} whileTap={{scale:1}}
                                 onClick={() => window.open(deployed_url)}
                                 className="flex flex-1 items-center rounded-md hover:shadow-xl bg-gradient-to-r from-grish to-blue-400 px-4 py-2"
-                                ><CgWebsite className="mr-1" size={30}/> Live Demo</button>
-                            <button
+                                ><CgWebsite className="mr-1" size={30}/> Live Demo</motion.button>
+                            <motion.button
+                                whileHover={{scale: 1.03}} whileTap={{scale:1}}
                                 onClick={() => window.open(github_url[0])}
                                 className="flex flex-1 items-center rounded-md hover:shadow-xl bg-gradient-to-r from-grish to-blue-400 px-4 py-2"
-                                ><FiGithub className="mr-1" size={30} /> Github</button>
+                                ><FiGithub className="mr-1" size={30} /> Github</motion.button>
                         </div>
                     </div>
                     <div className="col-span-12 lg:col-span-6">
@@ -38,7 +43,7 @@ const ProjectCard = ({ project: { name, category, image_path, deployed_url, desc
                             }
                         </ul>
                     </div>
-                    <button onClick={()=>setActive(false)} className="absolute top-5 right-5 dark:text-white"><FaWindowClose className="w-8 h-8 fill-current" /></button>
+                    <motion.button whileHover={{scale: 1.2}} whileTap={{scale:1}} onClick={()=>setActive(false)} className="absolute top-5 right-5 text-red-500"><FaWindowClose className="w-8 h-8 fill-current" /></motion.button>
                 </div>
                 )
             }
