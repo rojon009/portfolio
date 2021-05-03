@@ -29,18 +29,6 @@ export const services = [
       "I have skills on <strong>UI/UX</strong> design. I can work with Adobe XD, Figma, Illustrator template.",
     Icon: FiFigma,
   },
-  {
-    title: "API Development",
-    description:
-      "I can build RestFull API with Nodejs and Express including support of Authentication.",
-    Icon: AiOutlineApi,
-  },
-  {
-    title: "API Development",
-    description:
-      "I can build RestFull API with Nodejs and Express including support of Authentication.",
-    Icon: AiOutlineApi,
-  },
 ];
 
 export const skills = [
