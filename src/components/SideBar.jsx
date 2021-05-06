@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import profile from '../images/rojon.jpg';
 import {SiFacebook, SiGithub, SiLinkedin} from 'react-icons/si';
 import {IoLocationOutline} from 'react-icons/io5'
 import { HiOutlineDownload } from 'react-icons/hi';
 import { motion } from "framer-motion";
+import {CopyToClipboard} from 'react-copy-to-clipboard';
+import ReactTooltip from 'react-tooltip';
+
 import resume from '../images/rojon_resume.pdf';
 
 const SideBar = ({handleDark, dark}) => {
+    const [copyText, setCopyText] = useState('Click to Copy Email');
+
     return (
         <div className="text-center p-5">
             <img className="w-32 h-32 rounded-full object-cover mx-auto ring-1 ring-black ring-offset-2 dark:ring-white dark:ring-offset-transparent" src={profile} alt="profile"/>
@@ -31,7 +36,12 @@ const SideBar = ({handleDark, dark}) => {
                     <IoLocationOutline className="w-5 h-5" />
                     <span>Sylhet, Bangladesh</span>
                 </div>
-                <p>rojon009@gmail.com</p>
+                <CopyToClipboard text="rojon009@gmail.com">
+                    <p onClick={()=>setCopyText('Email Copied to Clipboard')} data-tip data-for="email" className="underline cursor-pointer">rojon009@gmail.com</p>
+                </CopyToClipboard>
+                <ReactTooltip id="email" type="info" effect="solid">
+                    <span>{copyText}</span>
+                </ReactTooltip>
                 <p>+8801797764296</p>
             </div>
             <div className="space-y-2">

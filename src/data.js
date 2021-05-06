@@ -92,7 +92,7 @@ export const tools = [
   {
     Icon: FaCheckCircle,
     name: "Adobe Illustrator",
-    level: "60%",
+    level: "65%",
   },
   {
     Icon: FaCheckCircle,
@@ -188,7 +188,7 @@ export const blogs = [
     },
     {
         title: '15 CSS you probably didn\'t know',
-        description: 'We use lots of CSS but this are gonna amaze you.',
+        description: 'We use lots of CSS but these are gonna amaze you.',
         image_path: 'https://webtopic.com/wp-content/uploads/2020/03/Top-15-CSS-Books-1170x508.jpg'
     }
 ]
