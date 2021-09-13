@@ -13,6 +13,8 @@ export const fadeInUp = {
     }
 }
 
+
+
 export const stagger = {
     initial: {},
     animate: {
